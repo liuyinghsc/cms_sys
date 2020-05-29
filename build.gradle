@@ -1,16 +1,90 @@
-plugins {
-    id 'java'
-    id 'war'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
-
 repositories {
+    jcenter()
     mavenCentral()
 }
 
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'idea'
+apply plugin: 'application'
+mainClassName = 'com.cms.hello.CmsApplication'
+//applicationDefaultJvmArgs = ["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"]  //还是找不到主程序
+apply plugin: "jacoco"
+
+//配置自动化测试
+sourceSets {
+    apiTest {
+        resources {
+            srcDirs.add(file("src/apiTest/resources"))
+        }
+        compileClasspath += main.output + test.output
+        runtimeClasspath += main.output + test.output
+    }
+}
+configurations {
+    apiTestCompile.extendsFrom testCompile
+    apiTestRuntime.extendsFrom testRuntime
+}
+//添加一个Test类型的Task用于运行src/apiTest/java目录下的API测试代码：
+task apiTest(type: Test) {
+    testClassesDirs = sourceSets.apiTest.output.classesDirs
+    classpath = sourceSets.apiTest.runtimeClasspath
+}
+//为了使Intelli IDEA能够感知到这些新添加的测试代码，我们需要对Gradle的idea插件进行额外配置：
+idea {
+    module {
+        testSourceDirs += file('src/apiTest/java')
+        testSourceDirs += file('src/apiTest/resources')
+        scopes.TEST.plus += [configurations.apiTestCompile]
+        scopes.TEST.plus += [configurations.apiTestRuntime]
+    }
+}
+//为了使本地构建（./gradlew biuld）过程能够先运行单元测试，再运行API测试，我们还需要做以下配置：
+apiTest.mustRunAfter test
+build.dependsOn apiTest
+//为了得到API测试的覆盖率
+task jacocoApiTestReport(type: JacocoReport){
+    sourceSets sourceSets.main
+    executionData apiTest
+}
+//看到单元测试和API测试的整体覆盖率
+//task jacocoAllTestReport(type: JacocoReport){
+//    sourceSets sourceSets.main
+//    executionData test, apiTest
+//}
+//build.dependsOn jacocoAllTestReport
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//bootRun {
+//    systemProperties System.properties
+//}
+
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '3.0'
+//}
+
+wrapper{
+    gradleVersion = '3.0'
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("io.rest-assured:spring-mock-mvc:3.0.7")
+
 }
