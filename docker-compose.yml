@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql-dev:
+    image: mysql:5.7
+    container_name: mysqldb
+    hostname: localhost
+    ports:
+    - "3306:3306"
+    volumes:
+    - ./mysql:/var/lib/mysql
+    - ./my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+    - MYSQL_ROOT_PASSWORD=123456
