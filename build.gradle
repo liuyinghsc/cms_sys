@@ -5,6 +5,8 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+        classpath(group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: "4.0.3")
+        classpath(group: 'mysql', name: 'mysql-connector-java', version: "5.1.41")
     }
 }
 
@@ -18,33 +20,36 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'idea'
 apply plugin: 'application'
 mainClassName = 'com.cms.hello.CmsApplication'
-//applicationDefaultJvmArgs = ["-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"]  //还是找不到主程序
 apply plugin: "jacoco"
+apply plugin: 'org.flywaydb.flyway'
+
 
 //配置自动化测试
 sourceSets {
+
     apiTest {
         resources {
             srcDirs.add(file("src/apiTest/resources"))
         }
-        compileClasspath += main.output + test.output
-        runtimeClasspath += main.output + test.output
+        compileClasspath += sourceSets.main.output + sourceSets.test.output
+        runtimeClasspath += sourceSets.main.output + sourceSets.test.output
     }
+
 }
-configurations {
-    apiTestCompile.extendsFrom testCompile
-    apiTestRuntime.extendsFrom testRuntime
-}
+
 //添加一个Test类型的Task用于运行src/apiTest/java目录下的API测试代码：
 task apiTest(type: Test) {
     testClassesDirs = sourceSets.apiTest.output.classesDirs
     classpath = sourceSets.apiTest.runtimeClasspath
 }
+//ideaModule.dependsOn compileQuerydsl
+
 //为了使Intelli IDEA能够感知到这些新添加的测试代码，我们需要对Gradle的idea插件进行额外配置：
 idea {
     module {
         testSourceDirs += file('src/apiTest/java')
         testSourceDirs += file('src/apiTest/resources')
+//        sourceDirs += file('src/querydsl/java')
         scopes.TEST.plus += [configurations.apiTestCompile]
         scopes.TEST.plus += [configurations.apiTestRuntime]
     }
@@ -52,10 +57,16 @@ idea {
 //为了使本地构建（./gradlew biuld）过程能够先运行单元测试，再运行API测试，我们还需要做以下配置：
 apiTest.mustRunAfter test
 build.dependsOn apiTest
+
 //为了得到API测试的覆盖率
 task jacocoApiTestReport(type: JacocoReport){
     sourceSets sourceSets.main
     executionData apiTest
+}
+
+configurations {
+    apiTestCompile.extendsFrom testCompile
+    apiTestRuntime.extendsFrom testRuntime
 }
 //看到单元测试和API测试的整体覆盖率
 //task jacocoAllTestReport(type: JacocoReport){
@@ -67,13 +78,9 @@ task jacocoApiTestReport(type: JacocoReport){
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-//bootRun {
-//    systemProperties System.properties
-//}
-
-//task wrapper(type: Wrapper) {
-//    gradleVersion = '3.0'
-//}
+bootRun {
+    systemProperties System.properties
+}
 
 wrapper{
     gradleVersion = '3.0'
@@ -81,10 +88,19 @@ wrapper{
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("mysql:mysql-connector-java:5.1.48")
+    compile("org.flywaydb:flyway-core")
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+    compile('net.javacrumbs.shedlock:shedlock-spring:0.18.2')
+    compile('net.javacrumbs.shedlock:shedlock-provider-jdbc-template:0.18.2')
+
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
 //    testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile("io.rest-assured:spring-mock-mvc:3.0.7")
-
 }
+
+
