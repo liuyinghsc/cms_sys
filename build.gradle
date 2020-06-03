@@ -19,7 +19,7 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'idea'
 apply plugin: 'application'
-mainClassName = 'com.cms.hello.CmsApplication'
+mainClassName = 'com.cms.CmsApplication'
 apply plugin: "jacoco"
 apply plugin: 'org.flywaydb.flyway'
 
@@ -35,6 +35,14 @@ sourceSets {
         runtimeClasspath += sourceSets.main.output + sourceSets.test.output
     }
 
+    e2eTest {
+        resources {
+            srcDirs.add(file("src/e2eTest/resources"))
+        }
+        compileClasspath += sourceSets.main.output + sourceSets.test.output
+        runtimeClasspath += sourceSets.main.output + sourceSets.test.output
+    }
+
 }
 
 //添加一个Test类型的Task用于运行src/apiTest/java目录下的API测试代码：
@@ -42,6 +50,11 @@ task apiTest(type: Test) {
     testClassesDirs = sourceSets.apiTest.output.classesDirs
     classpath = sourceSets.apiTest.runtimeClasspath
 }
+//添加一个Test类型的Task用于运行src/apiTest/java目录下的API测试代码：
+//task e2eTest(type: Test) {
+//    testClassesDirs = sourceSets.e2eTest.output.classesDirs
+//    classpath = sourceSets.e2eTest.runtimeClasspath
+//}
 //ideaModule.dependsOn compileQuerydsl
 
 //为了使Intelli IDEA能够感知到这些新添加的测试代码，我们需要对Gradle的idea插件进行额外配置：
@@ -49,10 +62,14 @@ idea {
     module {
         testSourceDirs += file('src/apiTest/java')
         testSourceDirs += file('src/apiTest/resources')
+
+        testSourceDirs += file('src/e2eTest/java')
+        testSourceDirs += file('src/e2eTest/resources')
 //        sourceDirs += file('src/querydsl/java')
         scopes.TEST.plus += [configurations.apiTestCompile]
         scopes.TEST.plus += [configurations.apiTestRuntime]
     }
+
 }
 //为了使本地构建（./gradlew biuld）过程能够先运行单元测试，再运行API测试，我们还需要做以下配置：
 apiTest.mustRunAfter test
@@ -90,6 +107,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jdbc")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-security")
     compile("mysql:mysql-connector-java:5.1.48")
     compile("org.flywaydb:flyway-core")
     compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
@@ -97,6 +115,7 @@ dependencies {
     compile('net.javacrumbs.shedlock:shedlock-provider-jdbc-template:0.18.2')
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.springframework.security:spring-security-test")
 
 //    testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
