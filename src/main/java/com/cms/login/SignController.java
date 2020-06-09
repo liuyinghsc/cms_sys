@@ -21,7 +21,7 @@ public class SignController {
     public String login(){
 //        User user1 = Optional.ofNullable(user).map(signService::getPassword).orElse(null);
 //        return (user1.getPassword().equals(user.getPassword())?"Login success":"Login failed");
-        return "ok";
+        return "basic ok";
     }
 
 
