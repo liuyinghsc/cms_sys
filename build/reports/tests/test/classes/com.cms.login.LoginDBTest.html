@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.cms.login.LoginDBTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.cms.login.LoginDBTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.cms.login.html">com.cms.login</a> &gt; LoginDBTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.325s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">findFromDataInsert</td>
+<td class="success">2.325s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>09:42:09.066 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.cms.login.LoginDBTest]
+09:42:09.078 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:42:09.090 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:42:09.116 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.cms.login.LoginDBTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:42:09.146 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cms.login.LoginDBTest], using SpringBootContextLoader
+09:42:09.152 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.cms.login.LoginDBTest]: class path resource [com/cms/login/LoginDBTest-context.xml] does not exist
+09:42:09.152 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.cms.login.LoginDBTest]: class path resource [com/cms/login/LoginDBTestContext.groovy] does not exist
+09:42:09.153 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.cms.login.LoginDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:42:09.154 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cms.login.LoginDBTest]: LoginDBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:42:09.206 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.cms.login.LoginDBTest]
+09:42:09.218 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+09:42:09.219 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+09:42:09.219 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+09:42:09.240 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/cms/login/] to resources [URL [file:/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login/], URL [file:/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/]]
+09:42:09.241 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login]
+09:42:09.241 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login] for files matching pattern [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login/*.class]
+09:42:09.247 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login]
+09:42:09.247 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login] for files matching pattern [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/*.class]
+09:42:09.249 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/cms/login/*.class] to resources [file [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login/AbstractTest.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login/LoginDBTest.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/login/signTest.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/LoginSecurityConfiguration.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/SignController.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/SignRepository.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/SignService.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/login/User.class]]
+09:42:09.330 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/cms/] to resources [URL [file:/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/], URL [file:/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/]]
+09:42:09.330 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms]
+09:42:09.330 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms] for files matching pattern [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/*.class]
+09:42:09.331 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms]
+09:42:09.331 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms] for files matching pattern [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/*.class]
+09:42:09.333 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/cms/*.class] to resources [file [/Users/ying.liu/Projects/cms_sys/build/classes/java/test/com/cms/helloTest.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/CmsApplication.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/HelloController.class], file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/HelloWord.class]]
+09:42:09.382 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ying.liu/Projects/cms_sys/build/classes/java/main/com/cms/CmsApplication.class]
+09:42:09.390 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cms.CmsApplication for test class com.cms.login.LoginDBTest
+09:42:09.395 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Merging default listeners with listeners configured via @TestExecutionListeners for class [com.cms.login.LoginDBTest].
+09:42:09.401 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+09:42:09.439 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@82336f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65cafe98, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2621a229, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18a6d048, org.springframework.test.context.transaction.TransactionalTestExecutionListener@923e913, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b2ff891, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@10343537, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3ebe93e9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28438e5c, com.github.database.rider.spring.DBRiderTestExecutionListener@6c6c00b5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5dc01d82, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@172bec08, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23aea1df, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2fcb64b7]
+09:42:09.446 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.cms.login.LoginDBTest]
+09:42:09.447 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.cms.login.LoginDBTest]
+09:42:09.454 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.cms.login.LoginDBTest]
+09:42:09.454 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.cms.login.LoginDBTest]
+09:42:09.455 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.cms.login.LoginDBTest]
+09:42:09.455 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.cms.login.LoginDBTest]
+09:42:09.461 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1fd9c1d1 testClass = LoginDBTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@250b2fc2 testClass = LoginDBTest, locations = '{}', classes = '{class com.cms.CmsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69d108ee, org.springframework.boot.test.context.SpringBootTestContextCustomizer@77b61df, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@55f3762d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+09:42:09.462 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.cms.login.LoginDBTest]
+09:42:09.462 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.cms.login.LoginDBTest]
+09:42:09.464 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@1fd9c1d1 testClass = LoginDBTest, testInstance = com.cms.login.LoginDBTest@1bf94e72, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@250b2fc2 testClass = LoginDBTest, locations = '{}', classes = '{class com.cms.CmsApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@69d108ee, org.springframework.boot.test.context.SpringBootTestContextCustomizer@77b61df, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@55f3762d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+09:42:09.565 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+09:42:09.565 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+09:42:09.566 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+09:42:09.567 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+09:42:09.567 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2020-06-09 09:42:20.130  INFO 58923 --- [    Test worker] com.cms.login.LoginDBTest                : Starting LoginDBTest on YingdeMacBook-Pro.local with PID 58923 (started by ying.liu in /Users/ying.liu/Projects/cms_sys)
+2020-06-09 09:42:20.132  INFO 58923 --- [    Test worker] com.cms.login.LoginDBTest                : No active profile set, falling back to default profiles: default
+2020-06-09 09:42:20.434  INFO 58923 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@48d08695: startup date [Tue Jun 09 09:42:20 CST 2020]; root of context hierarchy
+2020-06-09 09:42:22.117  INFO 58923 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e2b6143] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-09 09:42:22.625  INFO 58923 --- [    Test worker] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 0 (http)
+2020-06-09 09:42:22.647  INFO 58923 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2020-06-09 09:42:22.648  INFO 58923 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2020-06-09 09:42:22.797  INFO 58923 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-09 09:42:22.798  INFO 58923 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2367 ms
+2020-06-09 09:42:23.091  INFO 58923 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-09 09:42:23.092  INFO 58923 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-09 09:42:23.092  INFO 58923 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-09 09:42:23.093  INFO 58923 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-09 09:42:23.094  INFO 58923 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-06-09 09:42:23.095  INFO 58923 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-09 09:42:23.382  INFO 58923 --- [    Test worker] o.f.core.internal.util.VersionPrinter    : Flyway 3.2.1 by Boxfuse
+2020-06-09 09:42:24.523  INFO 58923 --- [    Test worker] o.f.c.i.dbsupport.DbSupportFactory       : Database: jdbc:mysql://localhost:3306/cms_sys?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8mb4_bin&amp;useServerPrepStmts=false&amp;rewriteBatchedStatements=true&amp;serverTimezone=GMT%2B8&amp;autoReconnect=true (MySQL 5.7)
+2020-06-09 09:42:24.586  INFO 58923 --- [    Test worker] o.f.core.internal.command.DbValidate     : Validated 3 migrations (execution time 00:00.034s)
+2020-06-09 09:42:24.660  INFO 58923 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema `cms_sys`: 3
+2020-06-09 09:42:24.664  INFO 58923 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema `cms_sys` is up to date. No migration necessary.
+2020-06-09 09:42:24.801  INFO 58923 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-06-09 09:42:24.834  INFO 58923 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-09 09:42:24.983  INFO 58923 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-06-09 09:42:24.987  INFO 58923 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-06-09 09:42:24.990  INFO 58923 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-06-09 09:42:25.079  INFO 58923 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-06-09 09:42:25.288  INFO 58923 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-09 09:42:26.026  INFO 58923 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-09 09:42:27.475  INFO 58923 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d09eb74, org.springframework.security.web.context.SecurityContextPersistenceFilter@61197e4f, org.springframework.security.web.header.HeaderWriterFilter@758bda9b, org.springframework.security.web.authentication.logout.LogoutFilter@ddd7cc8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4b31218e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74fb9d9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5454c0a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1604aac8, org.springframework.security.web.session.SessionManagementFilter@5b02bbf2, org.springframework.security.web.access.ExceptionTranslationFilter@5f360134, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@454e7639]
+2020-06-09 09:42:27.479  WARN 58923 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2020-06-09 09:42:27.838  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@48d08695: startup date [Tue Jun 09 09:42:20 CST 2020]; root of context hierarchy
+2020-06-09 09:42:27.979  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hello],methods=[GET]}&quot; onto public java.lang.String com.cms.HelloController.hello()
+2020-06-09 09:42:27.982  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/gethello],methods=[POST]}&quot; onto public com.cms.HelloWord com.cms.HelloController.hello1(com.cms.HelloWord)
+2020-06-09 09:42:27.982  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hello/{s}],methods=[GET]}&quot; onto public com.cms.HelloWord com.cms.HelloController.hello2(java.lang.String)
+2020-06-09 09:42:27.983  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/rehello],methods=[GET]}&quot; onto public com.cms.HelloWord com.cms.HelloController.hello3(java.lang.String)
+2020-06-09 09:42:27.984  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/login],methods=[POST]}&quot; onto public java.lang.String com.cms.login.SignController.login()
+2020-06-09 09:42:27.985  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/sign],methods=[POST]}&quot; onto public com.cms.login.User com.cms.login.SignController.sign(com.cms.login.User)
+2020-06-09 09:42:27.989  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-09 09:42:27.990  INFO 58923 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-09 09:42:28.037  INFO 58923 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-09 09:42:28.038  INFO 58923 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-09 09:42:28.109  INFO 58923 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-09 09:42:28.417  INFO 58923 --- [    Test worker] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 60918 (http)
+2020-06-09 09:42:28.423  INFO 58923 --- [    Test worker] com.cms.login.LoginDBTest                : Started LoginDBTest in 18.851 seconds (JVM running for 25.448)
+2020-06-09 09:42:28.486  INFO 58923 --- [    Test worker] org.dbunit.database.DatabaseConfig       : The property ending with 'replacers' was not found. Please notify a dbunit developer to add the property to the class org.dbunit.database.DatabaseConfig
+2020-06-09 09:42:28.493  INFO 58923 --- [    Test worker] c.g.d.r.c.dataset.DataSetExecutorImpl    : DBUnit configuration for dataset executor 'default':
+cacheConnection: true
+cacheTableNames: true
+leakHunter: false
+allowEmptyFields: false
+fetchSize: 100
+qualifiedTableNames: false
+batchSize: 100
+batchedStatements: false
+caseSensitiveTableNames: false
+replacers: [com.github.database.rider.core.replacers.DateTimeReplacer@6fc745ba, com.github.database.rider.core.replacers.UnixTimestampReplacer@75326f1e, com.github.database.rider.core.replacers.NullReplacer@5ea7459c]
+
+2020-06-09 09:42:30.205  INFO 58923 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-09 09:42:30.207  INFO 58923 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-09 09:42:30.233  INFO 58923 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2020-06-09 09:42:30.249  INFO 58923 --- [o-auto-1-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/login':
+
+org.apache.catalina.connector.RequestFacade@4e3dde13
+
+servletPath:/login
+pathInfo:null
+headers: 
+content-type: application/json;charset=UTF-8
+authorization: Basic dGVzdDoxMjM0NTY=
+accept: */*
+content-length: 0
+host: localhost:60918
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.3 (Java/1.8.0_251)
+accept-encoding: gzip,deflate
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2020-06-09 09:42:30.289  INFO 58923 --- [o-auto-1-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-06-09 09:42:30.528  INFO 58923 --- [o-auto-1-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+New HTTP session created: AC8B91EBF0A8572A02732672232B2E4C
+
+Call stack: 
+
+	at org.springframework.security.web.debug.Logger.info(Logger.java:44)
+	at org.springframework.security.web.debug.DebugRequestWrapper.getSession(DebugFilter.java:166)
+	at org.springframework.security.web.debug.DebugRequestWrapper.getSession(DebugFilter.java:177)
+	at javax.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:231)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper.createNewSessionIfAllowed(HttpSessionSecurityContextRepository.java:427)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper.saveContext(HttpSessionSecurityContextRepository.java:364)
+	at org.springframework.security.web.context.HttpSessionSecurityContextRepository.saveContext(HttpSessionSecurityContextRepository.java:151)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:77)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+************************************************************
+
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Set-Cookie: JSESSIONID=AC8B91EBF0A8572A02732672232B2E4C;path=/;HttpOnly
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Tue, 09 Jun 2020 01:42:30 GMT
+
+ok
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Tue Jun 09 09:42:23 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue Jun 09 09:42:24 CST 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.1</a> at 2020-6-9 9:42:31</p>
+</div>
+</div>
+</body>
+</html>

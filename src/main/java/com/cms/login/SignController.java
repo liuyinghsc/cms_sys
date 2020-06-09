@@ -1,6 +1,7 @@
 package com.cms.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -17,9 +18,10 @@ public class SignController {
 
 //登陆
     @PostMapping("/login")
-    public String login(@RequestBody User user){
-        User user1 = Optional.ofNullable(user).map(signService::getPassword).orElse(null);
-        return (user1.getPassword().equals(user.getPassword())?"Login success":"Login failed");
+    public String login(){
+//        User user1 = Optional.ofNullable(user).map(signService::getPassword).orElse(null);
+//        return (user1.getPassword().equals(user.getPassword())?"Login success":"Login failed");
+        return "ok";
     }
 
 

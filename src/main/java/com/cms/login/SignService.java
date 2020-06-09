@@ -1,10 +1,11 @@
 package com.cms.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SignService {
+public class SignService  {
 
     @Autowired
     private SignRepository signRepository;
