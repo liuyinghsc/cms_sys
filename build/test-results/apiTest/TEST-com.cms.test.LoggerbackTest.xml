@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cms.test.LoggerbackTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-13T11:15:35" hostname="YingdeMacBook-Pro.local" time="0.093">
+  <properties/>
+  <testcase name="should_logback_when_logger_given_backlog" classname="com.cms.test.LoggerbackTest" time="0.093"/>
+  <system-out><![CDATA[19:15:35.384 [Test worker] DEBUG com.cms.test.LoggerbackTest - parent logger
+19:15:35.397 [Test worker] WARN com.cms.test.LoggerbackTest - This message is logged because WARN > INFO.
+19:15:35.398 [Test worker] INFO com.cms.test.LoggerbackTest - INFO == INFO
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

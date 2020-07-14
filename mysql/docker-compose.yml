@@ -5,7 +5,7 @@ services:
     container_name: mysqldb
     hostname: localhost
     ports:
-    - "3306:3306"
+    - "3307:3306"
     volumes:
     - mysql:/var/lib/mysql
     - ./my.cnf:/etc/my.cnf
